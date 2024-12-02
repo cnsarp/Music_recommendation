@@ -9,7 +9,7 @@ Additionally, sentiment values associated with hashtags will be analyzed to unde
 emotional context.
 
 - Datasets:
-[nowplaying-RS](https://www.kaggle.com/datasets/chelseapower/nowplayingrs)
+[nowplaying-RS](https://www.kaggle.com/datasets/chelseapower/nowplayingrs)\n
 [Spotify Tracks](https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset)
 
 
