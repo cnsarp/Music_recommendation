@@ -8,8 +8,10 @@ million music listening events from 139K users and 346K tracks collected from Tw
 Additionally, sentiment values associated with hashtags will be analyzed to understand the
 emotional context.
 
-[nowplaying-RS dataset](https://www.kaggle.com/datasets/chelseapower/nowplayingrs)
+- Datasets:
+[nowplaying-RS](https://www.kaggle.com/datasets/chelseapower/nowplayingrs)
+[Spotify Tracks](https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset)
 
 
 - Project report is available here:
-- [Report](https://github.com/cnsarp/Music_recommendation/tree/main/reports/Final%20Report.pdf)
+  #[Report](https://github.com/cnsarp/Music_recommendation/tree/main/reports/Final%20Report.pdf)
