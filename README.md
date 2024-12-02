@@ -14,4 +14,4 @@ emotional context.
 
 
 - Project report is available here:
-  #[Report](https://github.com/cnsarp/Music_recommendation/tree/main/reports/Final%20Report.pdf)
+  [Report](https://github.com/cnsarp/Music_recommendation/tree/main/reports/Final%20Report.pdf)
