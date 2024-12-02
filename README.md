@@ -9,3 +9,7 @@ Additionally, sentiment values associated with hashtags will be analyzed to unde
 emotional context.
 
 [nowplaying-RS dataset](https://www.kaggle.com/datasets/chelseapower/nowplayingrs)
+
+
+- Project report is available here:
+- [Report](https://github.com/cnsarp/Music_recommendation/tree/main/reports/Final%20Report.pdf)
