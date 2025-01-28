@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 from io import BytesIO, StringIO
 import pandas as pd
+%pip install matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import config
