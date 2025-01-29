@@ -749,7 +749,7 @@ elif section == "Genre Detection":
         st.image("src/streamlit/data/ClassificationReportKNN.PNG")
         st.cache_data.clear()
         #st.image("src/streamlit/data/ConfusionMatrixKNN.png")
-        Image.open('ConfusionMatrixKNN.png')
+        Image.open('src/streamlit/data/ConfusionMatrixKNN.png')
         
     elif option == 'Decision Tree':
         st.markdown("""Parameters (determined with GridSearch): 'criterion': 'gini', 'splitter': 'best' """)
