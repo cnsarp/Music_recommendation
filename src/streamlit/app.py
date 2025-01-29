@@ -15,22 +15,22 @@ import os
 data_dir = os.path.join(os.path.dirname(__file__), 'data')
 
 #DATASETS
-SPOTIFY_DATASET_PATH = os.path.join(data_dir, 'spotify_dataset.csv')
-Nowplaying_DATASET_PATH = os.path.join(data_dir, 'module4_cleaned.csv')
-TRACKS_PATH = os.path.join(data_dir, 'tracks.csv')
-IMAGE_PATH = os.path.join(data_dir, 'music_5.jpg' )
-GENRES_PATH = os.path.join(data_dir, 'df_genres_5000.csv')
-SCHEMA_PATH = os.path.join(data_dir, 'schemarecommendation.png')
-PCA_PATH = os.path.join(data_dir, 'PCA.png')
-Sentiment_dis= os.path.join(data_dir, 'Sentiment_count.png')
-np_features_dis= os.path.join(data_dir, 'continuous features.png')
-np_corr= os.path.join(data_dir, 'np_correlation_matrix.png')
-Feature_importance= os.path.join(data_dir, 'Feature importance_main.png')
-np_deep= os.path.join(data_dir, 'deep_learning_model loss_model acurracy.png')
-Track_per_genre = os.path.join(data_dir, 'track_genre_pop.png')
-Spotify_dis = os.path.join(data_dir, 'Spotify_dis.png')
-Spotify_cor = os.path.join(data_dir, 'spotify_correlation.png')
-Genre_Example = os.path.join(data_dir, "genre_example.png")
+SPOTIFY_DATASET_PATH = "src/streamlit/data/spotify_dataset.csv"
+Nowplaying_DATASET_PATH = "src/streamlit/data/module4_cleaned.csv"
+TRACKS_PATH ="src/streamlit/data/tracks.csv" 
+IMAGE_PATH = "src/streamlit/data/music_5.jpg"
+GENRES_PATH = "src/streamlit/data/df_genres_5000.csv"
+SCHEMA_PATH = "src/streamlit/data/schemarecommendation.png"
+PCA_PATH = "src/streamlit/data/PCA.png"
+Sentiment_dis= "src/streamlit/data/Sentiment_count.png"
+np_features_dis="src/streamlit/data/continuous features.png"
+np_corr= "src/streamlit/data/np_correlation_matrix.png"
+Feature_importance= "src/streamlit/data/Feature importance_main.png"
+np_deep= "src/streamlit/data/deep_learning_model loss_model acurracy.png"
+Track_per_genre ="src/streamlit/data/track_genre_pop.png" 
+Spotify_dis = "src/streamlit/data/Spotify_dis.png"
+Spotify_cor = "src/streamlit/data/spotify_correlation.png"
+Genre_Example = "src/streamlit/data/genre_example.png"
 
 
 #DATASETS:
