@@ -773,7 +773,7 @@ elif section == "Genre Detection":
     
     st.markdown(""" When comparing the classification reports and confusion matrices of the different models, it becomes evident that the models differ not just in their overall accuracy, but also in how well they can classify certain genres over others.""")
     st.markdown(""" We applied the model trained on the Spotify dataset onto the #nowplaying dataset, yielding the following results: """)
-    st.image("data/ResultsClassifier.png")
+    st.image("src/streamlit/data/ResultsClassifier.png")
 
     st.markdown(""" Overall, we must concede that the results of our efforts are less than ideal, but also not a complete failure. The model would have likely performed better if we had additional features available and were not limited to the few features that both datasets shared. Ideally, we would have had audio data, but this would have not been attainable and required handling of an even bigger amount of data and high-end hardware resources, which would have transcended the scope of this project. """)
   
