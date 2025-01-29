@@ -34,7 +34,13 @@ Spotify_cor = "src/streamlit/data/spotify_correlation.png"
 Genre_Example = "src/streamlit/data/genre_example.png"
 CMK = os.path.join(data_dir, 'ConfusionMatrixKNN.png')
 ClassificationReportDecTree = os.path.join(data_dir, "ClassificationReportDecTree.PNG")
-
+Confusion_matrix_decision_trees = os.path.join(data_dir,"Confusion_matrix_decision_trees.PNG")
+ClassificationReportRandomForest = os.path.join(data_dir,"ClassificationReportRandomForest.PNG")
+Confusion_matrix_random_forest = os.path.join(data_dir,"Confusion_matrix_random_forest.png")
+Model_summary = os.path.join(data_dir, "Modal summary.PNG")
+ConfusionMatrixNN = os.path.join(data_dir, "ConfusionMatrixNN.png")
+ConfusionMatrixNNstacked= os.path.join(data_dir, "ConfusionMatrixNNstacked.png")
+  
 
 #DATASETS:
 
@@ -756,24 +762,22 @@ elif section == "Genre Detection":
     elif option == 'Decision Tree':
         st.markdown("""Parameters (determined with GridSearch): 'criterion': 'gini', 'splitter': 'best' """)
         st.image(ClassificationReportDecTree)
-        #st.image("src/streamlit/data/Confusion_matrix_decision_trees.PNG")
-        Image.open("src/streamlit/data/Confusion_matrix_decision_trees.PNG")
+        st.image(Confusion_matrix_decision_trees)
+
         
     elif option == 'Random Forest':
         st.markdown("""Parameters (determined with GridSearch):  'max_depth': 20, 'min_samples_leaf': 1""")
-        Image.open("src/streamlit/data/ClassificationReportRandomForest.PNG")
-        #st.image("src/streamlit/data/ClassificationReportRandomForest.PNG")
-        Image.open("data/Confusion_matrix_random_forest.PNG")
-        #st.image("data/Confusion_matrix_random_forest.PNG")
+        st.image(ClassificationReportRandomForest)
+        st.image(Confusion_matrix_random_forest)
         
         
     elif option == 'Neural Network':
         st.markdown("""We wanted to see if a deep learning model could potentially outperform the “traditional” approaches and decided to build a sequential dense learning model with the following parameters:  """)
-        Image.open("src/streamlit/data/Model summary.png")
+        st.image(Model_summary)
         st.markdown(""" The classification results were as follows:""")
-        Image.open("src/streamlit/data/ConfusionMatrixNN.png")
+        st.image(ConfusionMatrixNN)
         st.markdown(""" As the performance of the Dense network did not surpass the performance of the Random Forest model, we combined the model with the Random Forest model to create a stacked model, as visualized below: """)
-        Image.open("src/streamlit/data/ConfusionMatrixNNstacked.png")
+        st.image(ConfusionMatrixNNstacked)
         
     
     st.markdown(""" When comparing the classification reports and confusion matrices of the different models, it becomes evident that the models differ not just in their overall accuracy, but also in how well they can classify certain genres over others.""")
