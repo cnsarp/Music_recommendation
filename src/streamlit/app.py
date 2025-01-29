@@ -807,8 +807,8 @@ elif section == "Recommendation":
 
                 """)
     resized_schema = resize_image(SCHEMA_PATH, 600) 
-    Image.open(resized_schema)
-    #st.image(resized_schema)
+    #Image.open(resized_schema)
+    st.image(resized_schema)
   
     data = {
         'User 23247402': {
