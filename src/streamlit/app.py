@@ -35,7 +35,7 @@ Genre_Example = os.path.join(data_dir, "genre_example.png")
 
 #DATASETS:
 
-spotify = pd.read_csv("src/streamlit/spotify_dataset.csv", index_col=0)
+spotify = pd.read_csv("src/streamlit/data/spotify_dataset.csv", index_col=0)
 
 # Set page configuration
 st.set_page_config(page_title="Music Recommendations")
