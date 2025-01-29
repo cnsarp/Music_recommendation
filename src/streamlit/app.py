@@ -752,22 +752,22 @@ elif section == "Genre Detection":
         
     elif option == 'Decision Tree':
         st.markdown("""Parameters (determined with GridSearch): 'criterion': 'gini', 'splitter': 'best' """)
-        st.image("data/ClassificationReport DecTree.PNG")
+        st.image("src/streamlit/data/ClassificationReport DecTree.PNG")
         st.image("data/Confusion matrix decision trees.PNG")
         
     elif option == 'Random Forest':
         st.markdown("""Parameters (determined with GridSearch):  'max_depth': 20, 'min_samples_leaf': 1""")
-        st.image("data/ClassificationReportRandomForest.PNG")
+        st.image("src/streamlit/data/ClassificationReportRandomForest.PNG")
         st.image("data/Confusion matrix random forest.PNG")
         
         
     elif option == 'Neural Network':
         st.markdown("""We wanted to see if a deep learning model could potentially outperform the “traditional” approaches and decided to build a sequential dense learning model with the following parameters:  """)
-        st.image("data/Model summary.png")
+        st.image("src/streamlit/data/Model summary.png")
         st.markdown(""" The classification results were as follows:""")
-        st.image("data/ConfusionMatrixNN.png")
+        st.image("src/streamlit/data/ConfusionMatrixNN.png")
         st.markdown(""" As the performance of the Dense network did not surpass the performance of the Random Forest model, we combined the model with the Random Forest model to create a stacked model, as visualized below: """)
-        st.image("data/ConfusionMatrixNNstacked.png")
+        st.image("src/streamlit/data/ConfusionMatrixNNstacked.png")
         
     
     st.markdown(""" When comparing the classification reports and confusion matrices of the different models, it becomes evident that the models differ not just in their overall accuracy, but also in how well they can classify certain genres over others.""")
