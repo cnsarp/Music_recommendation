@@ -748,12 +748,12 @@ elif section == "Genre Detection":
         st.subheader("Classification Report")
         st.image("src/streamlit/data/ClassificationReportKNN.PNG")
         st.cache_data.clear()
-        #st.image("src/streamlit/data/ConfusionMatrixKNN.jpg")
-        
+        #st.image("src/streamlit/data/ConfusionMatrixKNN.png")
+        Image.open('ConfusionMatrixKNN.png')
         
     elif option == 'Decision Tree':
         st.markdown("""Parameters (determined with GridSearch): 'criterion': 'gini', 'splitter': 'best' """)
-        st.image("src/streamlit/data/ClassificationReport DecTree.PNG")
+        st.image("src/streamlit/data/ClassificationReportDecTree.PNG")
         st.image("src/streamlit/data/Confusion_matrix_decision_trees.PNG")
         
     elif option == 'Random Forest':
