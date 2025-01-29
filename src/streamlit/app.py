@@ -1,12 +1,18 @@
+import streamlit as st
+from PIL import Image
+from io import BytesIO, StringIO
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler, PolynomialFeatures
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+
 import os
 
-#BASE_DIR_CANSU = 'C:/Users/Cometaca/Streamlit/'
-#BASE_GITHUB = 'src/streamlit/'
-
-#BASE_DIR = 'C:/Users/Cometaca/Streamlit/'
-#data_dir = os.path.join(BASE_DIR, 'data')
 data_dir = os.path.join(os.path.dirname(__file__), 'data')
-
 
 #DATASETS
 SPOTIFY_DATASET_PATH = os.path.join(data_dir, 'spotify_dataset.csv')
@@ -26,21 +32,9 @@ Spotify_dis = os.path.join(data_dir, 'Spotify_dis.png')
 Spotify_cor = os.path.join(data_dir, 'spotify_correlation.png')
 
 
-import streamlit as st
-from PIL import Image
-from io import BytesIO, StringIO
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, PolynomialFeatures
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-
 #DATASETS:
 
-spotify = pd.read_csv(config.SPOTIFY_DATASET_PATH, index_col=0)
+spotify = pd.read_csv(SPOTIFY_DATASET_PATH, index_col=0)
 
 # Set page configuration
 st.set_page_config(page_title="Music Recommendations")
@@ -54,7 +48,7 @@ def resize_image(image_path, width):
     return resized_img
 
 
-resized_image = resize_image(config.IMAGE_PATH, 900)  # Adjust width here
+resized_image = resize_image(IMAGE_PATH, 900)  # Adjust width here
 
 #This is for styling the sidebar
 st.markdown(
@@ -401,7 +395,7 @@ elif section == "Data Preprocessing":
     
     # Load and display preprocessed data
     st.subheader("Preprocessed Data Sample")
-    df_1 = pd.read_csv(config.Nowplaying_DATASET_PATH)  # Replace with the path to your preprocessed data
+    df_1 = pd.read_csv(Nowplaying_DATASET_PATH)  # Replace with the path to your preprocessed data
     st.dataframe(df_1.head())
 
     st.subheader("Spotify Tracks Dataset")
@@ -432,9 +426,9 @@ elif section == "Exploratory Data Analysis (EDA)":
     - **Other Notable Correlations:** There is a strong negative correlation between acousticness and energy, and moderate correlations between danceability and valence, as well as acousticness and loudness.
     """)
 
-    st.image(config.Sentiment_dis, caption="Figure 3: Sentiment Distribution in Nowplaying-RS Dataset")
-    st.image(config.np_features_dis, caption="Figure 4: Distribution of Continuous Variables in Nowplaying-RS Dataset")
-    st.image(config.np_corr, caption="Figure 5: Correlation Matrix for Nowplaying-RS Dataset")
+    st.image(Sentiment_dis, caption="Figure 3: Sentiment Distribution in Nowplaying-RS Dataset")
+    st.image(np_features_dis, caption="Figure 4: Distribution of Continuous Variables in Nowplaying-RS Dataset")
+    st.image(np_corr, caption="Figure 5: Correlation Matrix for Nowplaying-RS Dataset")
 
     st.subheader("Spotify Tracks Dataset")
     st.markdown("""
@@ -445,9 +439,9 @@ elif section == "Exploratory Data Analysis (EDA)":
     - **Genre Popularity:** Visualization of genre popularity reveals how popularity is distributed across different genres, providing insights into genre-specific trends (Fig. 8).
     """)
     
-    st.image(config.Spotify_dis, caption="Figure 6: Feature Distributions in Spotify Tracks Dataset")
-    st.image(config.Spotify_cor, caption="Figure 7: Correlation Matrix for Spotify Tracks Dataset")
-    st.image(config.Track_per_genre, caption="Figure 8: Genre Popularity in Spotify Tracks Dataset")
+    st.image(Spotify_dis, caption="Figure 6: Feature Distributions in Spotify Tracks Dataset")
+    st.image(Spotify_cor, caption="Figure 7: Correlation Matrix for Spotify Tracks Dataset")
+    st.image(Track_per_genre, caption="Figure 8: Genre Popularity in Spotify Tracks Dataset")
 
 
 # Modeling
@@ -536,7 +530,7 @@ elif section == "Modeling":
                 - The best model was Random Forest again.
                 - However, we couldn't have better results than the previous modeling. 
                 """)
-    st.image(config.PCA_PATH)
+    st.image(PCA_PATH)
     if st.button('Show Classification Report'):
        st.text(best_model_content_features) 
             
@@ -622,7 +616,7 @@ elif section == "Analysis of the Best Model":
     """)
     
     # Feature importance plot (replace 'path_to_feature_importance_plot' with the actual path)
-    st.image(config.Feature_importance, caption='Feature Importance for Nowplaying Dataset')
+    st.image(Feature_importance, caption='Feature Importance for Nowplaying Dataset')
 
     st.markdown("""
     **Key Observations:**
@@ -688,7 +682,7 @@ elif section == "Deep Learning":
     - **Model Accuracy Plot:** Steady improvement in training and validation accuracy.
     - **Model Loss Plot:** Consistent decrease in training loss, with validation loss generally following the trend.
     """)
-    st.image(config.np_deep, caption="Figure: Training and Validation Accuracy and Loss for the Deep Learning Model")
+    st.image(np_deep, caption="Figure: Training and Validation Accuracy and Loss for the Deep Learning Model")
 
     # Comparison with Random Forest Model
     st.subheader("Comparison with Random Forest Model")
@@ -790,8 +784,8 @@ elif section == "Recommendation":
                 - track ids used to get the columns below
                 - genres are also fetched but discrepancies were observed. 
                 """)
-    tracks = pd.read_csv(config.TRACKS_PATH, index_col=0)
-    genres = pd.read_csv(config.GENRES_PATH, index_col=0)
+    tracks = pd.read_csv(TRACKS_PATH, index_col=0)
+    genres = pd.read_csv(GENRES_PATH, index_col=0)
     st.dataframe(tracks.head(5))
     st.write('Genres')
     st.dataframe(genres.head(5))
@@ -804,7 +798,7 @@ elif section == "Recommendation":
                 &nbsp;
 
                 """)
-    resized_schema = resize_image(config.SCHEMA_PATH, 600) 
+    resized_schema = resize_image(SCHEMA_PATH, 600) 
     st.image(resized_schema)
   
     data = {
