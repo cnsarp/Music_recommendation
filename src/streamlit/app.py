@@ -12,17 +12,15 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 
 import os
 
-#data_dir = os.path.join(os.path.dirname(__file__), 'data')
-data_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'data')
-data_dir = os.path.abspath(data_dir) 
+data_dir = os.path.join(os.path.dirname(__file__), 'data')
+
 #DATASETS
 SPOTIFY_DATASET_PATH = os.path.join(data_dir, 'spotify_dataset.csv')
 Nowplaying_DATASET_PATH = os.path.join(data_dir, 'module4_cleaned.csv')
 TRACKS_PATH = os.path.join(data_dir, 'tracks.csv')
 IMAGE_PATH = os.path.join(data_dir, 'music_5.jpg' )
 GENRES_PATH = os.path.join(data_dir, 'df_genres_5000.csv')
-SCHEMA_PATH = os.path.join(data_dir, 'schema_recommendation.png')
-print(SCHEMA_PATH)
+SCHEMA_PATH = os.path.join(data_dir, 'schemarecommendation.png')
 PCA_PATH = os.path.join(data_dir, 'PCA.png')
 Sentiment_dis= os.path.join(data_dir, 'Sentiment_count.png')
 np_features_dis= os.path.join(data_dir, 'continuous features.png')
