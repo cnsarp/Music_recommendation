@@ -747,18 +747,18 @@ elif section == "Genre Detection":
         st.markdown("""Parameters (determined with GridSearch): n_neighbors = 30, metric = "manhattan" """)
         st.subheader("Classification Report")
         st.image("src/streamlit/data/ClassificationReportKNN.PNG")
-        st.image("src/streamlit/data/Confusion Matrix KNN.PNG")
+        st.image("src/streamlit/data/Confusion_Matrix_KNN.PNG")
         
         
     elif option == 'Decision Tree':
         st.markdown("""Parameters (determined with GridSearch): 'criterion': 'gini', 'splitter': 'best' """)
         st.image("src/streamlit/data/ClassificationReport DecTree.PNG")
-        st.image("data/Confusion matrix decision trees.PNG")
+        st.image("data/Confusion_matrix_decision_trees.PNG")
         
     elif option == 'Random Forest':
         st.markdown("""Parameters (determined with GridSearch):  'max_depth': 20, 'min_samples_leaf': 1""")
         st.image("src/streamlit/data/ClassificationReportRandomForest.PNG")
-        st.image("data/Confusion matrix random forest.PNG")
+        st.image("data/Confusion_matrix_random_forest.PNG")
         
         
     elif option == 'Neural Network':
