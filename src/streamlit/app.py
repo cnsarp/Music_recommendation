@@ -12,8 +12,9 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 
 import os
 
-data_dir = os.path.join(os.path.dirname(__file__), 'data')
-
+#data_dir = os.path.join(os.path.dirname(__file__), 'data')
+data_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'data')
+data_dir = os.path.abspath(data_dir) 
 #DATASETS
 SPOTIFY_DATASET_PATH = os.path.join(data_dir, 'spotify_dataset.csv')
 Nowplaying_DATASET_PATH = os.path.join(data_dir, 'module4_cleaned.csv')
@@ -21,6 +22,7 @@ TRACKS_PATH = os.path.join(data_dir, 'tracks.csv')
 IMAGE_PATH = os.path.join(data_dir, 'music_5.jpg' )
 GENRES_PATH = os.path.join(data_dir, 'df_genres_5000.csv')
 SCHEMA_PATH = os.path.join(data_dir, 'schema_recommendation.png')
+print(SCHEMA_PATH)
 PCA_PATH = os.path.join(data_dir, 'PCA.png')
 Sentiment_dis= os.path.join(data_dir, 'Sentiment_count.png')
 np_features_dis= os.path.join(data_dir, 'continuous features.png')
@@ -753,7 +755,7 @@ elif section == "Genre Detection":
     elif option == 'Decision Tree':
         st.markdown("""Parameters (determined with GridSearch): 'criterion': 'gini', 'splitter': 'best' """)
         st.image("src/streamlit/data/ClassificationReport DecTree.PNG")
-        st.image("data/Confusion_matrix_decision_trees.PNG")
+        st.image("src/streamlit/data/Confusion_matrix_decision_trees.PNG")
         
     elif option == 'Random Forest':
         st.markdown("""Parameters (determined with GridSearch):  'max_depth': 20, 'min_samples_leaf': 1""")
