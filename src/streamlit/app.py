@@ -20,7 +20,6 @@ Nowplaying_DATASET_PATH = "src/streamlit/data/module4_cleaned.csv"
 TRACKS_PATH ="src/streamlit/data/tracks.csv" 
 IMAGE_PATH = "src/streamlit/data/music_5.jpg"
 GENRES_PATH = "src/streamlit/data/df_genres_5000.csv"
-data_dir = os.path.join(os.path.dirname(__file__), 'data')
 SCHEMA_PATH = os.path.join(data_dir, 'schemarecommendation.PNG')
 #SCHEMA_PATH = "src/streamlit/data/schemarecommendation.PNG"
 PCA_PATH = "src/streamlit/data/PCA.png"
@@ -33,6 +32,7 @@ Track_per_genre ="src/streamlit/data/track_genre_pop.png"
 Spotify_dis = "src/streamlit/data/Spotify_dis.png"
 Spotify_cor = "src/streamlit/data/spotify_correlation.png"
 Genre_Example = "src/streamlit/data/genre_example.png"
+CMK = os.path.join(data_dir, 'ConfusionMatrixKNN.png')
 
 
 #DATASETS:
@@ -750,8 +750,8 @@ elif section == "Genre Detection":
         st.subheader("Classification Report")
         st.image("src/streamlit/data/ClassificationReportKNN.PNG")
         st.cache_data.clear()
-        #st.image("src/streamlit/data/ConfusionMatrixKNN.png")
-        Image.open('src/streamlit/data/ConfusionMatrixKNN.png')
+        st.image("CMK")
+        #Image.open('src/streamlit/data/ConfusionMatrixKNN.png')
         
     elif option == 'Decision Tree':
         st.markdown("""Parameters (determined with GridSearch): 'criterion': 'gini', 'splitter': 'best' """)
