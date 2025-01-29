@@ -755,7 +755,7 @@ elif section == "Genre Detection":
         
     elif option == 'Decision Tree':
         st.markdown("""Parameters (determined with GridSearch): 'criterion': 'gini', 'splitter': 'best' """)
-        st.image(ClassificationReportDecTree.PNG)
+        st.image(ClassificationReportDecTree)
         #st.image("src/streamlit/data/Confusion_matrix_decision_trees.PNG")
         Image.open("src/streamlit/data/Confusion_matrix_decision_trees.PNG")
         
