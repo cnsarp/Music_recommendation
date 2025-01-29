@@ -33,6 +33,7 @@ Spotify_dis = "src/streamlit/data/Spotify_dis.png"
 Spotify_cor = "src/streamlit/data/spotify_correlation.png"
 Genre_Example = "src/streamlit/data/genre_example.png"
 CMK = os.path.join(data_dir, 'ConfusionMatrixKNN.png')
+ClassificationReportDecTree = os.path.join(data_dir, "ClassificationReportDecTree.PNG")
 
 
 #DATASETS:
@@ -754,8 +755,7 @@ elif section == "Genre Detection":
         
     elif option == 'Decision Tree':
         st.markdown("""Parameters (determined with GridSearch): 'criterion': 'gini', 'splitter': 'best' """)
-        #st.image("src/streamlit/data/ClassificationReportDecTree.PNG")
-        Image.open("src/streamlit/data/ClassificationReportDecTree.PNG")
+        st.image(ClassificationReportDecTree.PNG)
         #st.image("src/streamlit/data/Confusion_matrix_decision_trees.PNG")
         Image.open("src/streamlit/data/Confusion_matrix_decision_trees.PNG")
         
