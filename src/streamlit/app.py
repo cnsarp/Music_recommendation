@@ -748,7 +748,7 @@ elif section == "Genre Detection":
         st.subheader("Classification Report")
         st.image("src/streamlit/data/ClassificationReportKNN.PNG")
         st.cache_data.clear()
-        st.image("src/streamlit/data/ConfusionMatrixKNN.PNG")
+        st.image("src/streamlit/data/ConfusionMatrixKNN.jpg")
         
         
     elif option == 'Decision Tree':
