@@ -749,7 +749,7 @@ elif section == "Genre Detection":
         st.markdown("""Parameters (determined with GridSearch): n_neighbors = 30, metric = "manhattan" """)
         st.subheader("Classification Report")
         st.image("src/streamlit/data/ClassificationReportKNN.PNG")
-        st.image("CMK")
+        st.image(CMK)
         #Image.open('src/streamlit/data/ConfusionMatrixKNN.png')
         
     elif option == 'Decision Tree':
