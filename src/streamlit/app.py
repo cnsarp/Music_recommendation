@@ -30,6 +30,7 @@ np_deep= os.path.join(data_dir, 'deep_learning_model loss_model acurracy.png')
 Track_per_genre = os.path.join(data_dir, 'track_genre_pop.png')
 Spotify_dis = os.path.join(data_dir, 'Spotify_dis.png')
 Spotify_cor = os.path.join(data_dir, 'spotify_correlation.png')
+Genre_Example = os.path.join(data_dir, "genre_example.png")
 
 
 #DATASETS:
@@ -721,7 +722,7 @@ elif section == "Genre Detection":
                 This meant that the dataset was hard to interpret for a human, which also meant that there would be very little information to rely on in terms of interpretability and performance assessment of the recommendation model.
                 Thus, the idea arose to try and assign a genre to each track. This would provide at least a category based on which one can get a rough idea of what a track might sound like. 
     """) 
-    st.image("data/genre_example.png")
+    st.image(Genre_Example)
     st.subheader("What even is genre?")
     st.markdown("""For the purpose of this project, we made the initial assumption that musical tracks can be put in groups based on shared features or properties; said group can be referred to as genre. 
                 Some of these features include the ones that the Spotify API provides: For example, we can assume that tracks belonging to the Dance genre have on average higher danceability scores, and tracks from the Acoustic genre would likely overall have very high acousticness scores. 
