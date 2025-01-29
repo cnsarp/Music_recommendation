@@ -40,7 +40,7 @@ Confusion_matrix_random_forest = os.path.join(data_dir,"Confusion_matrix_random_
 Model_summary = os.path.join(data_dir, "Model summary.PNG")
 ConfusionMatrixNN = os.path.join(data_dir, "ConfusionMatrixNN.png")
 ConfusionMatrixNNstacked= os.path.join(data_dir, "ConfusionMatrixNNstacked.png")
-ResultsClassiffier = os.path.join(data_dir, "ResultsClassifier.PNG")
+ResultsClassifier = os.path.join(data_dir, "ResultsClassifier.PNG")
   
 
 #DATASETS:
