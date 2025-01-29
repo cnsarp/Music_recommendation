@@ -753,27 +753,31 @@ elif section == "Genre Detection":
         
     elif option == 'Decision Tree':
         st.markdown("""Parameters (determined with GridSearch): 'criterion': 'gini', 'splitter': 'best' """)
-        st.image("src/streamlit/data/ClassificationReportDecTree.PNG")
-        st.image("src/streamlit/data/Confusion_matrix_decision_trees.PNG")
+        #st.image("src/streamlit/data/ClassificationReportDecTree.PNG")
+        Image.open("src/streamlit/data/ClassificationReportDecTree.PNG")
+        #st.image("src/streamlit/data/Confusion_matrix_decision_trees.PNG")
+        Image.open("src/streamlit/data/Confusion_matrix_decision_trees.PNG")
         
     elif option == 'Random Forest':
         st.markdown("""Parameters (determined with GridSearch):  'max_depth': 20, 'min_samples_leaf': 1""")
-        st.image("src/streamlit/data/ClassificationReportRandomForest.PNG")
-        st.image("data/Confusion_matrix_random_forest.PNG")
+        Image.open("src/streamlit/data/ClassificationReportRandomForest.PNG")
+        #st.image("src/streamlit/data/ClassificationReportRandomForest.PNG")
+        Image.open("data/Confusion_matrix_random_forest.PNG")
+        #st.image("data/Confusion_matrix_random_forest.PNG")
         
         
     elif option == 'Neural Network':
         st.markdown("""We wanted to see if a deep learning model could potentially outperform the “traditional” approaches and decided to build a sequential dense learning model with the following parameters:  """)
-        st.image("src/streamlit/data/Model summary.png")
+        Image.open("src/streamlit/data/Model summary.png")
         st.markdown(""" The classification results were as follows:""")
-        st.image("src/streamlit/data/ConfusionMatrixNN.png")
+        Image.open("src/streamlit/data/ConfusionMatrixNN.png")
         st.markdown(""" As the performance of the Dense network did not surpass the performance of the Random Forest model, we combined the model with the Random Forest model to create a stacked model, as visualized below: """)
-        st.image("src/streamlit/data/ConfusionMatrixNNstacked.png")
+        Image.open("src/streamlit/data/ConfusionMatrixNNstacked.png")
         
     
     st.markdown(""" When comparing the classification reports and confusion matrices of the different models, it becomes evident that the models differ not just in their overall accuracy, but also in how well they can classify certain genres over others.""")
     st.markdown(""" We applied the model trained on the Spotify dataset onto the #nowplaying dataset, yielding the following results: """)
-    st.image("src/streamlit/data/ResultsClassifier.png")
+    Image.open("src/streamlit/data/ResultsClassifier.png")
 
     st.markdown(""" Overall, we must concede that the results of our efforts are less than ideal, but also not a complete failure. The model would have likely performed better if we had additional features available and were not limited to the few features that both datasets shared. Ideally, we would have had audio data, but this would have not been attainable and required handling of an even bigger amount of data and high-end hardware resources, which would have transcended the scope of this project. """)
   
@@ -801,7 +805,8 @@ elif section == "Recommendation":
 
                 """)
     resized_schema = resize_image(SCHEMA_PATH, 600) 
-    st.image(resized_schema)
+    Image.open(resized_schema)
+    #st.image(resized_schema)
   
     data = {
         'User 23247402': {
